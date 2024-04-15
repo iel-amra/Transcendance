@@ -81,12 +81,16 @@ For docker-compose, here is an install guide : https://docs.docker.com/engine/in
 ### Installation
 
 1. Clone the repo
-   ```sh
-   git clone git@github.com:iel-amra/So_long.git
    ```
-2. Enter the So_long folder and compile
+   git clone git@github.com:iel-amra/Transcendance.git
    ```
-   cd So_long && make
+2. Create a .env and change it's value if needed :
+   ```
+   cp .env-example .env
+   ```
+3. Enter the Transcendance folder and build
+   ```
+   cd Transcendance && make
    ```
 
 That's it ! So_long is now installed on your machine.
