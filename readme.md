@@ -113,6 +113,12 @@ To stop the daemon, use :
 make down
 ```
 
+To connect the server, enter the following in your browser :
+```
+https://127.0.0.1:8000
+```
+Then accept the self-signed certificate. That's it, you're on the website !
+
 The API authentification should not work for you, unless you're a 42 student and know how to configure it in the intranet
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -127,7 +133,7 @@ This project was developed by Ihab El Amrani, Erik Avilov, Augustin Cousin, Nico
 
 Ihab El amrani - [Linkedin](https://www.linkedin.com/in/ihab-el-amrani) - iel-amra@student.42lyon.fr
 
-Project Link: [https://github.com/iel-amra/So_long](https://github.com/iel-amra/Transcendance)
+Project Link: [https://github.com/iel-amra/Transcendance](https://github.com/iel-amra/Transcendance)
 
 My github : [https://github.com/iel-amra](https://github.com/iel-amra)
 
