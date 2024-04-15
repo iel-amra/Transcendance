@@ -89,7 +89,7 @@ For <code class="language-plaintext highlighter-rouge">docker-compose</code>, he
    cd Transcendance && make
    ```
 
-That's it ! Transcendance is now installed on your machine.
+That's it ! Transcendance is now ready to start.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -98,21 +98,22 @@ That's it ! Transcendance is now installed on your machine.
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-To start the first map of the game, enter the following command in your terminal :
+To start the server, use :
 ```
-./so_long map/map1.ber
-```
-
-You can launch any map you want with the following syntax :
-```
-./so_long [map_name].ber
+make up
 ```
 
-Keys :
-* Deplacement : W,A,S,D or the arrow keys
-* Exit the game : Escape
-* Activate the fly cheat : V
+To start the server as a daemon, use :
+```
+make upd
+```
 
+To stop the daemon, use :
+```
+make down
+```
+
+The API authentification should not work for you, unless you're a 42 student and know how to configure it in the intranet
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Authors
