@@ -126,7 +126,7 @@ This project was developed by Ihab El Amrani, Erik Avilov, Augustin Cousin, Nico
 
 Ihab El amrani - [Linkedin](https://www.linkedin.com/in/ihab-el-amrani) - iel-amra@student.42lyon.fr
 
-Project Link: [https://github.com/iel-amra/So_long](https://github.com/iel-amra/So_long)
+Project Link: [https://github.com/iel-amra/So_long](https://github.com/iel-amra/Transcendance)
 
 My github : [https://github.com/iel-amra](https://github.com/iel-amra)
 
