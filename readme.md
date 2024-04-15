@@ -51,11 +51,7 @@ Transcendance is a multiplayer game website, with different features such as
 
 ![Product Name Screen Shot][product-screenshot]
 
-The game is purposely designed to be hard and frustrating.
-
-It's possible to build custom maps by creating a file with a .ber extension (see below)
-
-Since the subject only allowed Minilibx, all the physices and frame management is manually implemented. The collisions, animations and map building are manually implemented. The physics and display are optimized so the game can be rendered using the processor only, on one core (Imposed by the subject).
+The game was developed by a team of five students, each focusing on different features. I personnaly implemented the game's physics, the lag compensation, the AI agent, JWT for authentication, and the input validation for our API.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -64,7 +60,7 @@ Since the subject only allowed Minilibx, all the physices and frame management i
 <!-- GETTING STARTED -->
 ## Getting Started
 
-So_long was developed and tested only on ubuntu, but should work well on other debian based distribution
+Transcandance was developed and tested only on ubuntu, but should work well on other operating systems since it uses containers.
 
 ### Prerequisites
 
