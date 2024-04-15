@@ -490,11 +490,11 @@ var speedIa1 = 0;
 
 function find_pos_IA1() {
     let i = 0;
-    if (data.image % ctx.fps)
-        return
+    // if (data.image % ctx.fps)
+    //     return
     let copy = JSON.parse(JSON.stringify(data));
     while (((sanangle(copy.ball.tv) > PI / 2 && sanangle(copy.ball.tv) < 3 * PI / 2) || copy.ball.x > - ctx.width / 4)
-        && copy.ball.x > data.paddleL.x + ctx.paddlew + ctx.ballr && copy.scored == false && i < ctx.difficulty) {
+        && copy.ball.x > data.paddleL.x + ctx.paddlew + ctx.ballr && copy.scored == false) {
         simulate(copy, ctx);
         i++;
     }
@@ -506,11 +506,11 @@ var posIa2 = 0;
 var speedIa2 = 0;
 function find_pos_IA2() {
     let i = 0;
-    if (data.image % ctx.fps)
-        return
+    // if (data.image % ctx.fps)
+    //     return
     let copy = JSON.parse(JSON.stringify(data));
     while ((sanangle(copy.ball.tv) < PI / 2 || sanangle(copy.ball.tv) > 3 * PI / 2 || copy.ball.x < ctx.width / 4)
-        && copy.ball.x < data.paddleR.x + ctx.ballr && copy.scored == false && i < ctx.difficulty) {
+        && copy.ball.x < data.paddleR.x + ctx.ballr && copy.scored == false) {
         simulate(copy, ctx);
         i++;
     }
@@ -534,7 +534,7 @@ function frame() {
             data.keys[1] = false;
             find_pos_IA1();
             target = posIa1;
-            if (speedIa1 > 200)
+            if (speedIa1 > 400)
                 target = target - ctx.paddleh / 2 + ctx.paddleh * (Math.random() - .5) * .9
             else if (target >= 0)
                 target -= ctx.paddleh + ctx.paddlew;
@@ -551,7 +551,7 @@ function frame() {
             data.keys[3] = false;
             find_pos_IA2();
             target = posIa2;
-            if (speedIa2 > 200)
+            if (speedIa2 > 400)
                 target = target - ctx.paddleh / 2 + ctx.paddleh * (Math.random() - .5) * .9
             else if (target >= 0)
                 target -= ctx.paddleh + ctx.paddlew;
