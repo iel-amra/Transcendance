@@ -23,7 +23,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/iel-amra/So_long">
+  <a href="https://github.com/iel-amra/Transcendance">
     <img src="https://github.com/iel-amra/So_long/blob/main/img/So_long.png?raw=true" alt="Logo" width="400" height="400">
   </a>
 
