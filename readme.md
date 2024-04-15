@@ -49,9 +49,9 @@ Transcendance is a multiplayer game website, with different features such as
 - 3D graphics
 - Statistics about games
 
-![Product Name Screen Shot][product-screenshot]
-
 The game was developed by a team of five students, each focusing on different features. I personnaly implemented the game's physics, the lag compensation, the AI agent, JWT for authentication, and the input validation for our API.
+
+![Product Name Screen Shot][product-screenshot]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
