@@ -40,13 +40,14 @@
 ## About The Project
 
 Transcendance is a multiplayer game website, with different features such as
-- a multiplayer pong with server-side lag compensation
+- A multiplayer pong with server-side lag compensation
 - A user management system
 - A tournament system
 - AI oppenents
 - 42 API authentification and 2 factors authentification
 - Multilanguage support
 - 3D graphics
+- Statistics about games
 
 ![Product Name Screen Shot][product-screenshot]
 
@@ -67,11 +68,13 @@ So_long was developed and tested only on ubuntu, but should work well on other d
 
 ### Prerequisites
 
-<p>MiniLibX for Linux requires <code class="language-plaintext highlighter-rouge">xorg</code>, <code class="language-plaintext highlighter-rouge">x11</code> and <code class="language-plaintext highlighter-rouge">zlib</code>, therefore you will need to install the following dependencies: <code class="language-plaintext highlighter-rouge">xorg</code>, <code class="language-plaintext highlighter-rouge">libxext-dev</code> and <code class="language-plaintext highlighter-rouge">zlib1g-dev</code>. Installing these dependencies on Ubuntu can be done as follows:</p>
+<p>Transceandance requires <code class="language-plaintext highlighter-rouge">docker-compose</code> and <code class="language-plaintext highlighter-rouge">make</code>. Installing these dependencies on Ubuntu can be done as follows:</p>
 
 ```
-sudo apt-get update && sudo apt-get install xorg libxext-dev zlib1g-dev libbsd-dev
+sudo apt-get update && sudo apt-get install make
 ```
+
+For docker-compose, here is an install guide : https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository
 
 ### Installation
 
@@ -110,32 +113,10 @@ Keys :
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
-
-## Map creation
-
-To build a map, create a file with a .ber extension and fill it with the following characters :
-- 0 : Air
-- 1 : Walls, Floor and Ceiling
-- P : Player starting position (Only 1)
-- C : Collectibles (At least 1)
-- E : Exit (At least 1)
-
-The map needs to be a rectangle, else the game won't start.
-
-For example the following file :
-
-```
-1111111
-1P0C0E1
-1111111
-```
-Gives the following map :
-
-<img src="https://github.com/iel-amra/So_long/blob/main/img/screenshot_map.png?raw=true" alt="map-screenshot" width="500"/>
+## Authors
+This project was developed by Ihab El Amrani, Erik Avilov, Augustin Cousin, Nicolas Chabli and Julien Alamelle for 42.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 
 <!-- CONTACT -->
