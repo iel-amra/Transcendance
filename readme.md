@@ -66,13 +66,13 @@ Transcandance was developed and tested only on ubuntu, but should work well on o
 
 <p>Transceandance requires <code class="language-plaintext highlighter-rouge">docker-compose</code> and <code class="language-plaintext highlighter-rouge">make</code>. 
 
-Installing make on Ubuntu can be done as follows:</p>
+Installing <code class="language-plaintext highlighter-rouge">make</code> on Ubuntu can be done as follows:</p>
 
 ```
 sudo apt-get update && sudo apt-get install make
 ```
 
-For docker-compose, here is an install guide : https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository
+For <code class="language-plaintext highlighter-rouge">docker-compose</code>, here is an install guide : https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository
 
 ### Installation
 
@@ -89,7 +89,7 @@ For docker-compose, here is an install guide : https://docs.docker.com/engine/in
    cd Transcendance && make
    ```
 
-That's it ! So_long is now installed on your machine.
+That's it ! Transcendance is now installed on your machine.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

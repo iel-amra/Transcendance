@@ -1,5 +1,5 @@
 all:
-	- @docker-compose up -d --build
+	- @docker-compose build
 
 up:
 	- @docker-compose up
@@ -14,9 +14,9 @@ lclean:
 	@docker-compose down --rmi all --volumes --remove-orphans
 	@docker volume prune --force
 	@docker network prune --force
-	- @rm srcs/images/Python/Project/friend/migrations/0*
-	- @rm srcs/images/Python/Project/game/migrations/0*
-	- @rm srcs/images/Python/Project/accounts/migrations/0*
+	- @rm -f srcs/images/Python/Project/friend/migrations/0*
+	- @rm -f srcs/images/Python/Project/game/migrations/0*
+	- @rm -f srcs/images/Python/Project/accounts/migrations/0*
 
 clean:
 	@echo "Cleaning docker containers..."
@@ -24,9 +24,9 @@ clean:
 	- @docker system prune --all --force
 	- @docker volume prune --force
 	- @docker network prune --force
-	- @rm srcs/images/Python/Project/friend/migrations/0*
-	- @rm srcs/images/Python/Project/game/migrations/0*
-	- @rm srcs/images/Python/Project/accounts/migrations/0*
+	- @rm -f srcs/images/Python/Project/friend/migrations/0*
+	- @rm -f srcs/images/Python/Project/game/migrations/0*
+	- @rm -f srcs/images/Python/Project/accounts/migrations/0*
 
 prune:
 	@docker system prune --all --force
