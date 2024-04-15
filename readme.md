@@ -68,7 +68,9 @@ So_long was developed and tested only on ubuntu, but should work well on other d
 
 ### Prerequisites
 
-<p>Transceandance requires <code class="language-plaintext highlighter-rouge">docker-compose</code> and <code class="language-plaintext highlighter-rouge">make</code>. Installing these dependencies on Ubuntu can be done as follows:</p>
+<p>Transceandance requires <code class="language-plaintext highlighter-rouge">docker-compose</code> and <code class="language-plaintext highlighter-rouge">make</code>. 
+
+Installing make on Ubuntu can be done as follows:</p>
 
 ```
 sudo apt-get update && sudo apt-get install make
