@@ -24,7 +24,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/iel-amra/Transcendance">
-    <img src="https://github.com/iel-amra/So_long/blob/main/Transcendance.png?raw=true" alt="Logo" width="400" height="400">
+    <img src="https://github.com/iel-amra/Transcendance/blob/main/Transcendance.png?raw=true" alt="Logo" width="400" height="400">
   </a>
 
   <h3 align="center">Transcendance - The pong</h3>
