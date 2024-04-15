@@ -15,7 +15,4 @@ urlpatterns = [
 	path('toggleTfa/', requests.toggleTfa, name='toggleTfa'),
 	path('disableTfa/', requests.disableTfa, name='disableTfa'),
 	path('validateTfa/', requests.validateTfa, name='validateTfa'),
-
-	path('loadRegister/', views.loadRegister, name='loadRegister'),
-	path('loadLogin/', views.loadLogin, name='loadLogin'),
 ]

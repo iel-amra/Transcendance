@@ -19,9 +19,11 @@ services:
     container_name: django
     env_file:
       - .env 
-    volumes:
-      - ./srcs/images/Python/Project:/app
+    #volumes:
+    #  - ./srcs/images/Python/Project:/app
     restart: always
+    # depends_on:
+    #   - db
     networks:
       - ft_network
     ports:

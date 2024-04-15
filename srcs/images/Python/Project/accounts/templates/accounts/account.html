@@ -17,34 +17,16 @@
                 {% endif %}
                 <p class="mt-4 mb-1 field-heading">display name</p>
                 <h5>{{ display_name }} </h5>
+				{% if is_self %}
                 <p class="mt-4 mb-1 field-heading"> username </p>
                 <h5>{{ username }}</h5>
+				{% endif %}
             </div>
         </div>
 
         <!-- Logique de demande d'amis et interactions -->
         <div class="card m-2 col-md-4">
             <div class="card-body">
-                {% if request_sent == 0 %}
-                <div class="d-flex flex-row align-items-center justify-content-between">
-                    <span>{{ lang.w_accept_friend_request }}</span>
-                    <button id="id_cancel_{{id}}" class="btn btn-outline-danger">{{ lang.w_cancel }}</button>
-                    <button id="id_confirm_{{id}}" class="btn btn-outline-success">{{ lang.w_accept }}</button>
-                </div>
-                {% endif %}
-                
-                {% if is_friend == False and is_self == False %}
-                    {% if request_sent == 1 %}
-                    <div class="text-center pt-4">
-                        <button class="btn btn-danger" id="id_cancel_friend_request_btn">{{ lang.w_cancel_friend_request }}</button>
-                    </div>
-                    {% endif %}
-                    {% if request_sent == -1 %}
-                    <div class="text-center pt-4">
-                        <button class="btn btn-primary" id="id_send_friend_request_btn">{{ lang.w_send_friend_request }}</button>
-                    </div>
-                    {% endif %}
-                {% endif %}
                 
 				{% if is_self %}
                 <div class="pt-4">

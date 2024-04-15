@@ -47,6 +47,7 @@ def home(request):
 		'lang' : lang,
 		'username': request.user.username if request.user.is_authenticated else 'usurpateur',
 	}
+	print(request.user.is_authenticated)
 	return render(request, 'game.html', context)
 
 @api_view(['GET'])
@@ -180,8 +181,8 @@ def register(request):
 				raise ValueError("Invalid email")
 			email = request.POST.get('email', '').strip()
 			validate_email(email)
-		except ValueError as e:
-			return JsonResponse({'success': False, 'error': str(e)})
+		except:
+			return JsonResponse({'success': False, 'error': 'Invalid input'})
 		formData = {'username': request.POST.get('username'),
 		'email': request.POST.get('email'),
 		'password1': request.POST.get('password1'), 'password2': request.POST.get('password2')}

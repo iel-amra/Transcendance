@@ -39,9 +39,14 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-So long is a 2D platformer developed for linux with a library called Minilibx.
-
-The goal of the game is to pick up all the potions before exiting through the plant.
+Transcendance is a multiplayer game website, with different features such as
+- a multiplayer pong with server-side lag compensation
+- A user management system
+- A tournament system
+- AI oppenents
+- 42 API authentification and 2 factors authentification
+- Multilanguage support
+- 3D graphics
 
 ![Product Name Screen Shot][product-screenshot]
 
@@ -150,5 +155,4 @@ My github : [https://github.com/iel-amra](https://github.com/iel-amra)
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/ihab-el-amrani
-[product-screenshot]: https://github.com/iel-amra/So_long/blob/main/img/screenshot.png?raw=true
-[map-screenshot]: https://github.com/iel-amra/So_long/blob/main/img/screenshot_map.png?raw=true
+[product-screenshot]: https://github.com/iel-amra/Transcendance/blob/main/screenshot.png?raw=true

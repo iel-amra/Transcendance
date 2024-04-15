@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Russo+One&display=swap");
+
 
 #gameContainer {
 	position: relative;
@@ -183,6 +183,7 @@
 
 }
 
+@import url("https://fonts.googleapis.com/css2?family=Russo+One&display=swap");
 
 svg {
 	font-family: "Russo One", sans-serif;

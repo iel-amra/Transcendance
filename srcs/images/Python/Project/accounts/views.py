@@ -1,5 +1,4 @@
 from django.shortcuts import render
-from django.contrib.auth.forms import AuthenticationForm
 
 from django.http import HttpResponse
 from .models import *
@@ -10,23 +9,11 @@ from friend.utils import get_friend_request_or_false
 from friend.friend_request_status import FriendRequestStatus
 from friend.models import *
 
-from rest_framework.permissions import IsAuthenticated, AllowAny
+from rest_framework.permissions import IsAuthenticated
 from rest_framework.decorators import api_view, permission_classes
 
 from game.languages import *
 
-def langPref(request):
-	if request.user.is_authenticated:
-		PreferredLanguage = request.user.PreferredLanguage
-		if PreferredLanguage == 'French':
-			lang, created = French.objects.get_or_create(pk=1)
-		elif PreferredLanguage == 'English':
-			lang, created = English.objects.get_or_create(pk=1)
-		elif PreferredLanguage == 'Russian':
-			lang, created = Russian.objects.get_or_create(pk=1)
-	else:
-		lang, created = English.objects.get_or_create(pk=1)
-	return lang
 
 @api_view(['GET', 'POST'])
 @permission_classes([IsAuthenticated])
@@ -250,22 +237,3 @@ def game_details(request):
 	data.append(game.loserscore)
 	context['data'] = data
 	return render(request, "accounts/game_details.html", context)
-
-@api_view(['GET'])
-@permission_classes([AllowAny])
-def loadRegister(request):
-	context = {}
-	lang = langPref(request)
-	context['lang'] = lang
-	context['regForm'] = UserRegisterForm(auto_id="register_%s")
-	return render(request, "accounts/register.html", context)
-
-@api_view(['GET'])
-@permission_classes([AllowAny])
-def loadLogin(request):
-	context = {}
-	lang = langPref(request)
-	context['lang'] = lang
-	context['form'] = AuthenticationForm()
-	return render(request, "accounts/login.html", context)
-	

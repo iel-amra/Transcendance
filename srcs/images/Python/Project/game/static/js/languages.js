@@ -416,4 +416,4 @@ export async function	 lang_switcher(value) {
 		allRussian();
 }
 
-// loadPref();
+loadPref();

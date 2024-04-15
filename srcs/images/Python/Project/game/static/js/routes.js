@@ -3,25 +3,6 @@ import { attachSearchListener, attachListListener, attachAcceptListeners, attach
 import { handle_token , getCookie , check_token } from "./jwt.js";
 import { attachHistoryChartListener } from "./chart.js"
 import { attachGameChartListener, attachGameListListener } from "./chart.js"
-import { attachRegListener, attachLoginListener } from "./authentication.js"
-
-async function callRequest(type, url, dataType) {
-	$.ajax({
-		type: type,
-		url: url,
-		dataType: dataType,
-		beforeSend: function(request) {
-			handle_token(request);
-		},
-		success: function(data) {
-			document.getElementById('homenav').style.display = 'block';
-			document.getElementById('main_page').innerHTML = data;
-		},
-		error: function(error) {
-			console.error('Error loading: ', url);
-		},
-	});
-}
 
 const timer = document.getElementById('timerBg');
 const routes = {
@@ -29,9 +10,18 @@ const routes = {
 		hideAll();
 		document.getElementById('home').style.display = 'block';
 		document.getElementById('homenav').style.display = 'block';
-		document.getElementById('tournament_display').style.display = 'block';
-		document.getElementById('profview').style.display = 'block';
-		document.getElementById('logout').style.display = 'block';
+		if (check_token()) { // if connected
+			document.getElementById('tournament_display').style.display = 'block';
+			document.getElementById('loginbtn').style.display = 'none';
+			document.getElementById('profview').style.display = 'block';
+			document.getElementById('logout').style.display = 'block';
+		}
+		else { // if not
+			document.getElementById('logout').style.display = 'none';
+			document.getElementById('loginbtn').style.display = 'block';
+			document.getElementById('profview').style.display = 'none';
+			document.getElementById('tournament_display').style.display = 'none';
+		}
 	},
 	'#game': () => {
 			hideAll();
@@ -44,8 +34,8 @@ const routes = {
 	'#login': () => {
 		if (!check_token()) {
 			hideAll();
-			callRequest('GET', 'loadLogin/', 'text');
-			attachLoginListener();
+			document.getElementById('homenav').style.display = 'block';
+			document.getElementById('login').style.display = 'block';
 		}
 		else {
 			hideAll();
@@ -56,8 +46,8 @@ const routes = {
 	'#register': () => {
 		if (!check_token()) {
 			hideAll();
-			callRequest('GET', 'loadRegister/', 'text');
-			attachRegListener();
+			document.getElementById('homenav').style.display = 'block';
+			document.getElementById('register').style.display = 'block';
 		}
 		else {
 			hideAll();
@@ -246,7 +236,7 @@ const routes = {
 };
 
 async function hideAll() {
-	// document.getElementById('home').style.display = 'none';
+	document.getElementById('home').style.display = 'none';
 	document.getElementById('app').style.display = 'none';
 	document.getElementById('game').style.display = 'none';
 	timer.style.display = 'none';
@@ -256,8 +246,9 @@ async function hideAll() {
 
 	/*  Melhior  */
 
-	// document.getElementById('register').style.display = 'none';
-	// document.getElementById('login').style.display = 'none';
+	document.getElementById('reg_error').style.display = 'none';
+	document.getElementById('login').style.display = 'none';
+	document.getElementById('register').style.display = 'none';
 	document.getElementById('forbidden').style.display = 'none';
 
 	document.getElementById('profile_page').style.display = 'none';
@@ -381,7 +372,6 @@ async function handleHashChange() {
 			routeAction();
 	}
 	else {
-		console.log(document.getElementById('main_page'))
 		window.location.hash = '#login';
 		if (routeAction)
 			routeAction();

@@ -19,7 +19,7 @@ class ctx_class(object):
         self.timeToRestart = 5
         self.fps = 60
         self.fpi = 3
-        self.gameDuration = 25
+        self.gameDuration = 60
         self.lag_delay = 2
         self.difficulty = 5000
 

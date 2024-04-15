@@ -8,6 +8,8 @@ WORKDIR /app
 COPY requirements.txt /app
 COPY Project/ /app
 
+COPY wait.sh /app
+
 RUN pip install django
 RUN pip install python-dotenv
 RUN pip install psycopg2
@@ -50,4 +52,4 @@ RUN openssl req -x509 -nodes -days 365 -newkey \
 
 EXPOSE 8000
 
-CMD [ "bash", "wait.sh" ]
+CMD [ "./wait.sh" ]

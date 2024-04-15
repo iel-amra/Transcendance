@@ -276,7 +276,7 @@ function connectWebSocket() {
     if (gameSocket !== null && gameSocket.readyState !== WebSocket.CLOSED) {
         gameSocket.close();
     }
-}
+
     
     gameSocket = new WebSocket(
         'wss://'
@@ -287,9 +287,8 @@ function connectWebSocket() {
         };
         
         gameSocket.onerror = function (error) {
-            if (gameSocket.readyState == WebSocket.OPEN) {
-        };
-        
+            if (gameSocket.readyState == WebSocket.OPEN) {};
+		}
         function init_connection(e) {
             if (check_token()) {
                 gameSocket.send(JSON.stringify({

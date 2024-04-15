@@ -20,13 +20,13 @@ lclean:
 
 clean:
 	@echo "Cleaning docker containers..."
-	- @docker ps -aq | xargs docker stop | xargs docker rm
+	- @docker-compose down --rmi all --volumes --remove-orphans
 	- @docker system prune --all --force
 	- @docker volume prune --force
 	- @docker network prune --force
-	- y | rm srcs/images/Python/Project/friend/migrations/0*
-	- y | rm srcs/images/Python/Project/game/migrations/0*
-	- y | rm srcs/images/Python/Project/accounts/migrations/0*
+	- @rm srcs/images/Python/Project/friend/migrations/0*
+	- @rm srcs/images/Python/Project/game/migrations/0*
+	- @rm srcs/images/Python/Project/accounts/migrations/0*
 
 prune:
 	@docker system prune --all --force
